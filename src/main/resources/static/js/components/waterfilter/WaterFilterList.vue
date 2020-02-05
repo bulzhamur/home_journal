@@ -1,12 +1,18 @@
 <template>
     <v-flex>
-        <p>{{ serviceList }}</p>
+        <WaterFilterRow
+                :serviceList="serviceList"
+        ></WaterFilterRow>
     </v-flex>
 </template>
 
 <script>
+    import WaterFilterRow from "components/waterfilter/WaterFilterRow.vue";
     export default {
         name: "WaterFilterList",
+        components: {
+            WaterFilterRow
+        },
         data: function(){
             return {
                 serviceList: []
