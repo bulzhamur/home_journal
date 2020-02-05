@@ -12,7 +12,7 @@ public class Cesspool {
   @Id
   @SequenceGenerator(name = "cesspoolSequence", sequenceName = "cesspool_id_seq", allocationSize = 1, initialValue = 1)
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cesspoolSequence")
-  private long id;
+  private int id;
   @ManyToOne(optional = false, cascade = CascadeType.ALL)
   @JoinColumn(name = "id_action")
   private Action action;
@@ -27,10 +27,10 @@ public class Cesspool {
   private User user;
 
 
-  public long getId() {
+  public int getId() {
     return id;
   }
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 

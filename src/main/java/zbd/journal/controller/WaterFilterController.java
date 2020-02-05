@@ -25,8 +25,8 @@ public class WaterFilterController {
     }
 
     @GetMapping("{id}")
-    public WaterFilter getOne(@PathVariable("id") WaterFilter waterfilter){
-        return waterfilter;
+    public WaterFilter getOne(@PathVariable("id") Integer idWaterfilter){
+        return this.waterFilterRepo.getOne(idWaterfilter);
     }
 
     @PostMapping

@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import WaterFilterList from "components/waterfilter/WaterFilterList";
+import WaterFilterList from "components/waterfilter/WaterFilterList.vue";
 export default {
     name: "Waterfilter",
     components: {
         WaterFilterList
-    }
+    },
 }
 </script>
 

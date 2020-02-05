@@ -18,7 +18,7 @@ export default new Router({
             component: Messages //() => import('pages/Messages.vue')
         },
         {
-            path: '/waterfilter',
+            path: '/service_list',
             component: Waterfilter //() => import('pages/Waterfilter.vue')
         },
         // {

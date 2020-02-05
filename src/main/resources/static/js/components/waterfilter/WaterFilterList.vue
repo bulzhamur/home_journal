@@ -1,14 +1,24 @@
 <template>
     <v-flex>
-        <ul>
-            <li>item</li>
-        </ul>
+        <p>{{ serviceList }}</p>
     </v-flex>
 </template>
 
 <script>
     export default {
-        name: "WaterFilterList"
+        name: "WaterFilterList",
+        data: function(){
+            return {
+                serviceList: []
+            }
+        },
+        created: function () {
+            this.$resource('/waterfilter{/id}').get().then(result=>
+                result.json().then(data=>
+                    data.forEach(item => this.serviceList.push(item))
+                )
+            )
+        }
     }
 </script>
 

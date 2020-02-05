@@ -94,7 +94,7 @@
             drawer: null,
             items: [
                 { icon: 'chat_bubble', text: 'Messages list', link: '/msgs' },
-                { icon: 'lightbulb_outline', text: 'Water filter service', link: '/waterfilter' },
+                { icon: 'lightbulb_outline', text: 'Water filter service', link: '/service_list' },
                 { icon: 'touch_app', text: 'Cesspool pumping', link: '/' },
                 { divider: true },
                 // { heading: 'Labels' },

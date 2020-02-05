@@ -3,15 +3,16 @@ package zbd.journal.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "water_filter")
-public class WaterFilter {
+public class WaterFilter implements Serializable {
   @Id
   @SequenceGenerator(name = "waterfilterSequence", sequenceName = "aqua_filter_id_seq", allocationSize = 1, initialValue = 1)
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "waterfilterSequence")
-  private long id;
+  private int id;
   @ManyToOne(optional = false, cascade = CascadeType.ALL)
   @JoinColumn(name = "id_action")
   private Action action;
@@ -25,10 +26,10 @@ public class WaterFilter {
   @JoinColumn(name = "id_user")
   private User user;
 
-  public long getId() {
+  public int getId() {
     return id;
   }
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
