@@ -9,11 +9,13 @@
   },
   "main": "index.js",
   "dependencies": {
+    "@babel/polyfill": "^7.8.3",
     "style-loader": "^1.1.2",
     "vue": "^2.6.11",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.1.5",
-    "vuetify": "^2.1.0"
+    "vuetify": "^2.1.0",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

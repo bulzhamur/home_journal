@@ -88,9 +88,10 @@
 </template>
 
 <script>
+    import {mapState} from "vuex";
+
     export default {
         data: () => ({
-            profile: frontendData.profile,
             drawer: null,
             items: [
                 { icon: 'chat_bubble', text: 'Messages list', link: '/msgs' },
@@ -109,6 +110,7 @@
                 // { icon: 'keyboard', text: 'Keyboard shortcuts' },
             ],
         }),
+        computed: mapState(['profile'])
     }
 </script>
 

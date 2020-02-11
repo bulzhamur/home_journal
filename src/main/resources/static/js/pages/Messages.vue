@@ -3,22 +3,20 @@
         <v-flex>
             <h2>Messages list</h2>
             <router-link to="/">Home</router-link>
-            <messages-list :messages="messages"/>
+            <messages-list />
         </v-flex>
     </v-layout>
 </template>
 
 <script>
 import MessagesList from "components/messages/MessageList.vue";
+import { mapState } from 'vuex'
 
 export default {
     name: 'Messages',
     components: {
         MessagesList
-    },
-    data: () => ({
-        messages: frontendData.messages
-    })
+    }
 }
 </script>
 
